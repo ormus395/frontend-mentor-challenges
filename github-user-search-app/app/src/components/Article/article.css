@@ -1,0 +1,5 @@
+.article {
+  background-color: var(--foreground);
+  border-radius: 15px;
+  padding: 2rem 1.6rem;
+}

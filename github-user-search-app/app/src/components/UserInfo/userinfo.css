@@ -1,0 +1,24 @@
+.user-info__header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin-right: 1rem;
+}
+
+.user-avatar img {
+}
+
+@media screen and (max-width: 767px) {
+  .user-info h1 {
+    font-size: 1rem;
+  }
+
+  .user-info h3 {
+    font-size: 0.9rem;
+  }
+}

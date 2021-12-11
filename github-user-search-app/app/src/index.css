@@ -1,0 +1,95 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --error: #f74646;
+  --accent: #0079ff;
+  --accent-hvr: #60abff;
+  --slate-gray: #697c9a;
+  --san-marino: #4b6a9b;
+  --licorice: #2b3442;
+  --white: #fff;
+  --ghost-white: #f6f8ff;
+  --off-white: #fefefe;
+  --midnight-express: #141d2f;
+  --dark-slate-gray: #1e2a47;
+
+  --background: var(--ghost-white);
+  --foreground: var(--off-white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+========== DARK MODE ==========
+*/
+
+.darkmode {
+  --background: #141d2f;
+  --forground: #1e2a47;
+  color: var(--white);
+}
+
+body {
+  background: var(--background);
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+
+  height: 100vh;
+
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.73333rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.46666rem;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.06rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 0.8666rem;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+/* ===== Helpers ===== */
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
