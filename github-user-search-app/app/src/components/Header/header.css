@@ -4,7 +4,7 @@
 }
 
 .toggle {
-  color: black;
+  color: inherit;
   background: none;
   border: none;
   display: flex;

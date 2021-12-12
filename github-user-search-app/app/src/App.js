@@ -34,61 +34,45 @@ function App() {
         error: false,
         isLoaded: false,
       });
-      fetchUser("octocat")
-        .then((response) => {
-          let newProfile = {};
-          newProfile.login = response.login;
-          newProfile.avatar = response.avatar_url;
-          newProfile.company = response.company;
-          newProfile.followers = response.followers;
-          newProfile.following = response.following;
-          newProfile.location = response.location;
-          newProfile.name = response.name;
-          newProfile.repos = response.public_repos;
-          newProfile.twitter = response.twitter_username;
-          newProfile.blog = response.blog;
-          newProfile.created = response.created_at;
-          newProfile.bio = response.bio;
 
-          console.log("In use effect ", response);
-
-          setAppState({
-            userProfile: newProfile,
-            error: false,
-            isLoaded: true,
-          });
-        })
-        .catch((err) => console.log(err));
+      searchGithubUser("octocat");
     }
-    document.body.classList.toggle("darkmode");
   }, []);
 
   const searchGithubUser = (username) => {
     // fetch the github user
     // set state accordingly
-    fetchUser(username).then((response) => {
-      let newProfile = {};
-      newProfile.login = response.login;
-      newProfile.avatar = response.avatar_url;
-      newProfile.company = response.company;
-      newProfile.followers = response.followers;
-      newProfile.following = response.following;
-      newProfile.location = response.location;
-      newProfile.name = response.name;
-      newProfile.repos = response.public_repos;
-      newProfile.twitter = response.twitter_username;
-      newProfile.blog = response.blog;
-      newProfile.created = response.created_at;
-      newProfile.bio = response.bio;
+    fetchUser(username)
+      .then((response) => {
+        let newProfile = {};
+        newProfile.login = response.login;
+        newProfile.avatar = response.avatar_url;
+        newProfile.company = response.company;
+        newProfile.followers = response.followers;
+        newProfile.following = response.following;
+        newProfile.location = response.location;
+        newProfile.name = response.name;
+        newProfile.repos = response.public_repos;
+        newProfile.twitter = response.twitter_username;
+        newProfile.blog = response.blog;
+        newProfile.created = response.created_at;
+        newProfile.bio = response.bio;
 
-      console.log("In use effect ", response);
+        console.log("In use effect ", response);
 
-      setAppState({
-        userProfile: newProfile,
-        error: false,
-        isLoaded: true,
+        setAppState({
+          userProfile: newProfile,
+          error: false,
+          isLoaded: true,
+        });
+      })
+      .catch((err) => {
+        setAppState({
+          userProfile: Object.create(appState.userProfile),
+          error: true,
+          isLoaded: true,
+        });
       });
-    });
   };
 
   return (

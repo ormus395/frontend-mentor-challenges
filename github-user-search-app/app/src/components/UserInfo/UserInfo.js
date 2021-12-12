@@ -15,7 +15,7 @@ function UserInfo({ userProfile }) {
             />
           </div>
           <div className="">
-            <h1>{userProfile.name ? userProfile.name : "Start Search"}</h1>
+            <h1>{userProfile.name ? userProfile.name : "No name available"}</h1>
             <h3>{userProfile.login ? userProfile.login : "User tag"}</h3>
             <h4>{userProfile.created ? userProfile.created : "Joined"}</h4>
           </div>

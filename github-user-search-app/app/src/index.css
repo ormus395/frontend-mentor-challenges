@@ -45,6 +45,8 @@ body {
   height: 100vh;
 
   line-height: 1.6;
+
+  transition: background-color 200ms ease;
 }
 
 img {
