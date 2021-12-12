@@ -11,6 +11,58 @@
 }
 
 .user-avatar img {
+  border-radius: 50%;
+}
+
+.user-info__details {
+  background-color: var(--background);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.user-info__details .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info__links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-info__links li {
+  margin-right: 2.2rem;
+}
+
+.user-info__icon {
+  display: inline-block;
+  height: 20px;
+  width: 14px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.location {
+  background-image: url("../../assets/icon-location.svg");
+}
+
+.link {
+  background-image: url("../../assets/icon-website.svg");
+}
+
+.twitter {
+  background-image: url("../../assets/icon-twitter.svg");
+}
+
+.business {
+  background-image: url("../../assets/icon-company.svg");
 }
 
 @media screen and (max-width: 767px) {

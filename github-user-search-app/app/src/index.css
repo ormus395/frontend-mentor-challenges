@@ -30,7 +30,7 @@
 
 .darkmode {
   --background: #141d2f;
-  --forground: #1e2a47;
+  --foreground: #1e2a47;
   color: var(--white);
 }
 
@@ -79,6 +79,16 @@ h4 {
   font-weight: 400;
   font-size: 0.8666rem;
   margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  background: none;
 }
 
 #root {

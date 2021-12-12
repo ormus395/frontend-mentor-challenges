@@ -1,2 +1,19 @@
 .header {
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.toggle {
+  color: black;
+  background: none;
+  border: none;
+  display: flex;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
+.toggle span {
+  margin-left: 1rem;
 }
